@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+<h:head />
+<h:body>
+    <ui:composition template="/resources/template/layout.xhtml">
+        <ui:define name="content">
+            <div class="wrapper-blue-dk">
+                <div class="container">
+                    <h:form id="documents">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>
+                                    <h:outputText
+                                        value="#{patientbean.selectedPatient.firstName} #{patientbean.selectedPatient.lastName}" />
+                                    <small><i class="glyphicon glyphicon-chevron-right"></i> Documents</small>
+                                </h4>
+                            </div>
+                        </div>
+                        <h:panelGroup styleClass="document-detail-bottom">
+                            <p:panel>
+                                <p:accordionPanel value="#{documentquerybean.documents.results}" var="document">
+                                    <p:tab title="#{document.creationDate} #{document.documentTitle}">
+                                        <h:commandLink id="documentLink" action="#{documentbean.retrieveDocument}"
+                                            target="_new">
+                                            <p:panelGrid columns="1" cellpadding="10" styleClass="document-tab">
+                                                <p:row>
+                                                    <p:column>
+                                                        <h:outputText value="Care Summary: " style="font-style:italic;" />
+                                                        <h:outputText value="#{document.careSummary}" />
+                                                        <h:inputHidden value="#{document.documentId}"
+                                                            binding="#{documentbean.documentId}" />
+                                                        <h:inputHidden value="#{document.repositoryId}"
+                                                            binding="#{documentbean.repositoryId}" />
+                                                        <h:inputHidden value="#{document.documentTypeCode}"
+                                                            binding="#{documentbean.typeCode}" />
+                                                        <h:inputHidden value="#{document.documentFormatCode}"
+                                                            binding="#{documentbean.formatCode}" />
+                                                    </p:column>
+                                                </p:row>
+                                                <p:row rendered="#{not empty document.authorPerson}">
+                                                    <p:column>
+                                                        <h:outputText value="Author: " style="font-style:italic;" />
+                                                        <h:outputText value="#{document.authorPerson}" />
+                                                    </p:column>
+                                                </p:row>
+                                                <p:row rendered="#{not empty document.authorInstitution}">
+                                                    <p:column>
+                                                        <h:outputText value="Institute: " style="font-style:italic;" />
+                                                        <h:outputText value="#{document.authorInstitution}" />
+                                                    </p:column>
+                                                </p:row>
+                                            </p:panelGrid>
+                                        </h:commandLink>
+                                    </p:tab>
+                                </p:accordionPanel>
+                            </p:panel>
+                        </h:panelGroup>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h:commandLink action="#{documentbean.goBack}" class="btn btn-blue">
+                                    <i class="glyphicon glyphicon-chevron-left"></i>BACK TO PATIENT PROFILE
+                                </h:commandLink>
+                            </div>
+                        </div>
+                    </h:form>
+                </div>
+            </div>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,14 @@
+# Compiled Source #
+*.class
+bin
+target
+
+# OS Generated Files #
+.DS_Store
+.DS_Store?
+
+# Setup Files #
+.classpath
+.project
+.settings
+.metadata

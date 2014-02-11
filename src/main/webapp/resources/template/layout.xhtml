@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="US-ASCII" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:comp="http://java.sun.com/jsf/composite"
+    xmlns:f="http://java.sun.com/jsf/core" lang="en">
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
+    <title><ui:insert name="title"></ui:insert></title>
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="resources/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="css/jumbotron.css" rel="stylesheet"> IF USING NAVBAR-FIXED-TOP -->
+    <link href="resources/css/hih.css" rel="stylesheet" />
+
+    <style type="text/css"></style>
+</h:head>
+<h:body>
+    <h:outputStylesheet name="resources/css/hih.css" />
+    <div class="wrapper">
+        <div id="page">
+            <div id="header">
+                <ui:insert name="header">
+                    <ui:include src="commonHeader.xhtml" />
+                </ui:insert>
+            </div>
+            <div id="content">
+                <ui:insert name="content">
+                    <ui:include src="defaultContent.xhtml" />
+                </ui:insert>
+            </div>
+            <div class="footer" id="footer">
+                <ui:insert name="footer">
+                    <ui:include src="commonFooter.xhtml" />
+                </ui:insert>
+            </div>
+        </div>
+    </div>
+</h:body>
+</html>

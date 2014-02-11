@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<h:body style="background-color:#FFD700">
+		<h:form id="documents">
+			<h:panelGrid columns="1" border="0" id="patientSearchLabel"
+				width="80%" title="Search Patient">
+				<h:outputLabel style=";font-size: 150%;">DOCUMENTS</h:outputLabel>
+			</h:panelGrid>
+			<h:panelGroup>
+				<p:panel>
+					<p:accordionPanel value="#{documentbean.foundDocuments}"
+						var="document">
+						<p:tab title="#{document.creationDate}    #{document.documentTitle}">
+							<h:panelGrid columns="1" cellpadding="10">
+								<h:outputText value="#{document.documentTitle}"
+									style="font-weight: bold" />
+								<h:outputText value="#{document.documentId}"
+									style="font-weight: bold" />
+							</h:panelGrid>
+						</p:tab>
+					</p:accordionPanel>
+				</p:panel>
+			</h:panelGroup>
+		</h:form>
+	</h:body>
+</h:head>
+</html>

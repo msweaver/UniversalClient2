@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="US-ASCII" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
+<title>Common Header</title>
+</head>
+<body>
+    <ui:composition>
+        <!-- BEGIN: BANNER & NAVBAR -->
+        <div class="navbar" role="navigation">
+            <!-- "navbar-fixed-top" requires margin/height adjustments in hih.css -->
+            <div class="banner-top-rainbow"></div>
+            <div class="container banner-top">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                            class="icon-bar"></span> <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="Index.xhtml"><img src="resources/images/banner-logo-hih.png" alt="HIH Logo"
+                        width="240" height="82" border="0" title="Health Information Home" /></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <h:form id="signin">
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <li><h:link styleClass="banner-nav" value="SIGN IN" outcome="Login"
+                                    rendered="#{empty loginbean.loggedInUser}" /> <h:link styleClass="banner-nav"
+                                    value="#{loginbean.loggedInUser}" outcome="Login"
+                                    rendered="#{not empty loginbean.loggedInUser}" /></li>
+                            <li><h:commandLink styleClass="banner-nav" value="SIGN OUT"
+                                    action="#{loginbean.logout}" rendered="#{not empty loginbean.loggedInUser}" /></li>
+                            <li><a href="#">CONTACT US</a></li>
+                            <li><h:link styleClass="banner-nav" value="PORTAL" outcome="PatientSearch"
+                                    rendered="#{not empty loginbean.loggedInUser}" /></li>
+
+                        </ul>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+        <!-- END: BANNER & NAVBAR -->
+    </ui:composition>
+</body>
+</html>

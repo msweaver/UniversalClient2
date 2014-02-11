@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <script type="text/javascript">
+					
+				</script>
+</h:head>
+<h:body>
+    <ui:composition template="/resources/template/layout.xhtml">
+        <ui:define name="content">
+            <h:form id="patientdetails">
+                <p:messages autoUpdate="true" />
+                <!-- BEGIN: BLUE CONTENT AREA -->
+                <div class="wrapper-blue">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h:outputText rendered="#{not empty patientbean.selectedPatient.middleName}"
+                                    value="#{patientbean.selectedPatient.firstName} #{patientbean.selectedPatient.middleName} #{patientbean.selectedPatient.lastName}"
+                                    styleClass="h2" />
+                                <h:outputText rendered="#{empty patientbean.selectedPatient.middleName}"
+                                    value="#{patientbean.selectedPatient.firstName} #{patientbean.selectedPatient.lastName}"
+                                    styleClass="h2" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table table-patient">
+                                    <tr>
+                                        <td>Patient ID</td>
+                                        <td><h:outputText value="#{patientbean.selectedPatient.pid}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Organization</td>
+                                        <td><h:outputText value="#{patientbean.selectedPatient.domain}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Birth Date:</td>
+                                        <td><h:outputText value="#{patientbean.selectedPatient.birthDate}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gender:</td>
+                                        <td><h:outputText value="#{patientbean.selectedPatient.gender}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Current Address:</td>
+                                        <td><h:outputText
+                                                value="#{patientbean.selectedPatient.streetAddr} #{patientbean.selectedPatient.city} #{patientbean.selectedPatient.state} #{patientbean.selectedPatient.zip}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phone Number:</td>
+                                        <td><h:outputText value="#{patientbean.selectedPatient.phone}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>SSN:</td>
+                                        <td><h:outputText value="#{patientbean.selectedPatient.ssn}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Driver's License:</td>
+                                        <td><h:outputText value="#{patientbean.selectedPatient.dLicense}" /></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>Document Parameters</h4>
+                                <p:messages id="queryMessages" closable="true" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table table-patient">
+                                    <tr>
+                                        <td>Document Type</td>
+                                        <td><h:selectOneMenu styleClass="textbox-input-med"
+                                                value="#{documentquerybean.documentType}" id="documentTypeLbl"
+                                                style="text-aligh:left">
+                                                <f:selectItem itemLabel="All" itemValue="#{null}"
+                                                    noSelectionOption="true" />
+                                                <f:selectItem itemLabel="Error Document" itemValue="HIH-ERROR" />
+                                            </h:selectOneMenu></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Creation Time From</td>
+                                        <td><p:calendar styleClass="calendarField" id="dateLbl1"
+                                                value="#{documentquerybean.beginTime}" showOn="button"
+                                                pattern="MM/dd/yyyy" navigator="true" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Creation Time To</td>
+                                        <td><p:calendar styleClass="calendarField" id="dateLbl2"
+                                                value="#{documentquerybean.endTime}" showOn="button"
+                                                pattern="MM/dd/yyyy" navigator="true" /> <p:message id="m3"
+                                                for="dateLbl2" /></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h:commandLink action="#{patientbean.goBack}" class="btn btn-blue">
+                                    <i class="glyphicon glyphicon-chevron-left"></i>BACK TO SEARCH
+                                </h:commandLink>
+                                <h:commandLink action="#{documentquerybean.invokeDocumentDetails}"
+                                    class="btn btn-blue pull-right">
+                                    <i class="glyphicon glyphicon-file"></i>DOCUMENTS
+                                </h:commandLink>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

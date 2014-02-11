@@ -1,0 +1,387 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* -- SIGNIN STYLES ----------------------------------------------------------*/
+.form-signin {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+.form-signin .form-signin-heading,.form-signin .checkbox {
+	margin-bottom: 10px;
+}
+
+.form-signin .form-control {
+	position: relative;
+	font-size: 16px;
+	height: auto;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+
+.form-signin .btn-blue {
+	background-color: #0065a1;
+}
+
+/* -- RESPONSIVE DISABLING STYLES ARE AT THE BOTTOM OF THIS FILE ~200 LINES DOWN -- */
+
+/* -- NAVBAR & BANNER STYLES ----------------------------------------------- */
+.navbar {
+	margin-bottom: 0px;
+	background: #ffffff;
+}
+
+.banner-top-rainbow {
+	width: 100%;
+	height: 10px;
+	margin: 0px;
+	padding: 0px;
+	background: url(../images/banner-top-rainbow.png) repeat-x 50% 0%;
+}
+
+.banner-top {
+	height: 120px;
+	background: #ffffff;
+}
+
+.navbar-header {
+	height: 120px;
+	line-height: 120px;
+}
+
+.navbar-brand {
+	float: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.navbar-right {
+	float: right !important;
+}
+
+ul li.banner-nav {
+	height: 120px;
+	line-height: 120px;
+}
+
+ul a.banner-nav-link {
+	display: inline;
+	color: #000000;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+ul a.banner-nav-link.login {
+	font-size: 14px;
+}
+
+ul a.banner-nav-link.contact {
+	font-size: 18px;
+}
+
+/*-- PUSH THE JUMBOTRON DOWN TO MAKE ROOM FOR THE EXPANDED BANNER HEIGHT, ETC. --*/
+.jumbotron {
+	/* margin-top:124px; -- IF USING NAVBAR-FIXED-TOP -- BANNER height (banner plus banner-top) minus NAVBAR height -- (164 + 10) - 50 = 124 --*/
+	margin-bottom: 30px;
+	padding: 0px;
+	background: url(../images/jumbotron-bg-gray.png) repeat-x center bottom;
+	text-align: center;
+}
+
+.jumbotron .container {
+	padding: 0px;
+}
+
+.jumbotron-text {
+	/*height:240px;*/
+	padding: 35px 0px;
+	color: #ffffff;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.emphasize {
+	font-size: 30px;
+}
+
+.jumbotron-learnmore {
+	height: 65px;
+	padding: 0px;
+}
+
+.jumbotron-imgbuttons {
+	height: 240px;
+	margin: 20px 0px 0px;
+	padding: 0px;
+	white-space: nowrap;
+}
+
+/* -- CONTENT WRAPPER STYLES ----------------------------------------------- */
+.wrapper-blue .container,.wrapper-blue-dk .container,.wrapper-gold .container
+	{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.wrapper-blue {
+	padding: 15px 0px;
+	background: #00a7e1;
+	color: #ffffff;
+}
+
+.wrapper-blue-dk {
+	background: #0065a1;
+	color: #ffffff;
+}
+
+.wrapper-blue-dk h2 {
+	padding-top: 15px;
+	background: #0065a1;
+	color: #ffffff;
+}
+
+.wrapper-gold {
+	padding: 15px 0px;
+	background: #ffc945;
+	color: #ffffff;
+}
+
+.wrapper-gold-dk {
+	padding: 15px 0px;
+	background: #ecab00;
+	color: #ffffff;
+}
+
+/* -- FOOTER STYLES ----------------------------------------------- */
+footer .navbar {
+	margin-bottom: 0px;
+	background: none;
+}
+
+footer .navbar-header {
+	height: 120px;
+	line-height: 120px;
+}
+
+ul li.footer-nav {
+	height: 120px;
+	line-height: 120px;
+}
+
+/* -- PATIENT SEARCH STYLES ----------------------------------------------- */
+.form-search-patient .results {
+	border-style: none;
+}
+
+.form-search-patient h4 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ffffff;
+}
+
+.form-search-patient h4   ~ div.row {
+	margin: 20px 0px;
+}
+
+.form-search-patient h4   ~ div.row div[class^='col-md-'] {
+	padding-left: 0px;
+	padding-right: 15px;
+}
+
+.form-search-patient .btn-blue {
+	width: 100px;
+	margin: 20px 10px;
+	background-color: #0065a1;
+	border-color: #cc960e;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.form-search-patient .btn-orange:hover {
+	background-color: #ba8500; /*ffc32b*/
+}
+
+.form-search-patient .panel {
+	.wrapper-gold-dk;
+	border-style: none;
+}
+
+/* -- PATIENT PROFILE STYLES ----------------------------------------------- */
+table.table-patient {
+	margin-top: 20px;
+	border-bottom: 1px solid #dddddd;
+}
+
+table.table-patient td:first-child {
+	width: 33%;
+	padding-left: 100px;
+	font-weight: bold;
+}
+
+.btn-blue {
+	margin: 20px 10px;
+	background-color: #70c4e0;
+	border-color: #0065a1;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.btn-blue:hover {
+	background-color: #00456e;
+	color: #ffffff;
+}
+
+/* -- PATIENT DOCUMENTS STYLES ----------------------------------------------- */
+small {
+	color: #ffffff !important;
+}
+
+table.table-documents {
+	margin-top: 20px;
+	border-bottom: 1px solid #dddddd;
+}
+
+table.table-documents td {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+table.table-documents td:first-child {
+	width: auto;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+table.table-documents td a {
+	color: #ffffff;
+}
+
+table.table-documents td .document-detail {
+	margin-top: 15px;
+	margin-right: 25px;
+	padding: 15px 0px 0px;
+	border-top: 1px dashed #70c4e0;
+	font-weight: normal;
+}
+
+.caret-down {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-top: 6px solid;
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+}
+
+.caret-up {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-bottom: 6px solid;
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+}
+
+/* Non-responsive overrides
+ *
+ * Utilitze the following CSS to disable the responsive-ness of the container,
+ * grid system, and navbar.
+ */
+
+/* Reset the container */
+.container {
+	max-width: none !important;
+	width: 970px;
+}
+
+/* Demonstrate the grids */
+.container .navbar-header,.container .navbar-collapse {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+/* Always float the navbar header */
+.navbar-header {
+	float: left;
+}
+
+/* Undo the collapsing navbar */
+.navbar-collapse {
+	display: block !important;
+	height: auto !important;
+	padding-bottom: 0;
+	overflow: visible !important;
+}
+
+.navbar-toggle {
+	display: none;
+}
+
+.navbar-collapse {
+	border-top: 0;
+}
+
+.navbar-brand {
+	margin-left: -15px;
+}
+
+/* Always apply the floated nav */
+.navbar-nav {
+	float: left;
+	margin: 0;
+}
+
+.navbar-nav>li {
+	float: left;
+}
+
+.navbar-nav>li>a {
+	padding: 15px;
+}
+
+/* Redeclare since we override the float above */
+.navbar-nav.navbar-right {
+	float: right;
+}
+
+/* Undo custom dropdowns */
+.navbar .navbar-nav .open .dropdown-menu {
+	position: absolute;
+	float: left;
+	background-color: #fff;
+	border: 1px solid #cccccc;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-width: 0 1px 1px;
+	border-radius: 0 0 4px 4px;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+	color: #333;
+}
+
+.navbar .navbar-nav .open .dropdown-menu>li>a:hover,.navbar .navbar-nav .open .dropdown-menu>li>a:focus,.navbar .navbar-nav .open .dropdown-menu>.active>a,.navbar .navbar-nav .open .dropdown-menu>.active>a:hover,.navbar .navbar-nav .open .dropdown-menu>.active>a:focus
+	{
+	color: #fff !important;
+	background-color: #428bca !important;
+}
+
+.navbar .navbar-nav .open .dropdown-menu>.disabled>a,.navbar .navbar-nav .open .dropdown-menu>.disabled>a:hover,.navbar .navbar-nav .open .dropdown-menu>.disabled>a:focus
+	{
+	color: #999 !important;
+	background-color: transparent !important;
+}
+}

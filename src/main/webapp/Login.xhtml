@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<h:body>
+    <ui:composition template="/resources/template/layout.xhtml">
+
+        <ui:define name="content">
+
+            <div class="container">
+                <h:form id="login" class="form-signin" role="form">
+                    <div class="form-group">
+                        <h:inputText id="userName" value="#{loginbean.userName}" type="username" class="form-control"
+                            placeholder="User Name" />
+                        <p:watermark for="userName" value="User Name" />
+                    </div>
+                    <div class="form-group">
+                        <h:inputSecret id="password" value="#{loginbean.password}" type="password" class="form-control"
+                            placeholder="Password" />
+                        <p:watermark for="password" value="Password" />
+                    </div>
+                    <h:commandButton value="Sign in" action="#{loginbean.invokePatient}" type="submit"
+                        styleClass="btn btn-lg btn-primary btn-block" />
+                </h:form>
+            </div>
+
+            <!-- Bootstrap include. Placed at the end of the document so the pages load faster -->
+            <script src="../resources/js/bootstrap.min.js"></script>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>
