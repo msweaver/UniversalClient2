@@ -39,7 +39,8 @@ body {
 .navbar-brand {
 	float:none;
 	margin:0px;
-	padding:0px;
+	padding:1px;
+	line-height:100px;
 }
 .navbar-right {
 	float: right !important;
@@ -345,6 +346,7 @@ table.table-documents td .document-detail {
 }
 .navbar-nav > li > a {
   padding: 15px;
+  line-height:100px;
 }
 
 /* Redeclare since we override the float above */
