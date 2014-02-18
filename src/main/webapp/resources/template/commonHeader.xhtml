@@ -9,36 +9,31 @@
 <body>
     <ui:composition>
         <!-- BEGIN: BANNER & NAVBAR -->
-        <div class="navbar" role="navigation">
-            <!-- "navbar-fixed-top" requires margin/height adjustments in hih.css -->
-            <div class="banner-top-rainbow"></div>
+        <div class="navbar" role="navigation"> <!-- "navbar-fixed-top" requires margin/height adjustments in hih.css -->
+            <div class="banner-top-gradient"></div>
             <div class="container banner-top">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
-                            class="icon-bar"></span> <span class="icon-bar"></span>
+                        <span class="sr-only">Toggle navigation</span> 
+						<span class="icon-bar"></span> 
+						<span class="icon-bar"></span> <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="Index.xhtml"><img src="resources/images/banner-logo-hih.png" alt="HIH Logo"
-                        width="240" height="82" border="0" title="Health Information Home" /></a>
+                    <a class="navbar-brand" href="Index.xhtml"><img src="images/logo-connect-156x50.gif" alt="Connect Logo" width="156" height="50" border="0" title="Home" /></a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <h:form id="signin">
                         <ul class="nav navbar-nav navbar-right">
-
-                            <li><h:link styleClass="banner-nav" value="SIGN IN" outcome="Login"
-                                    rendered="#{empty loginbean.loggedInUser}" /> <h:link styleClass="banner-nav"
-                                    value="#{loginbean.loggedInUser}" outcome="Login"
-                                    rendered="#{not empty loginbean.loggedInUser}" /></li>
-                            <li><h:commandLink styleClass="banner-nav" value="SIGN OUT"
-                                    action="#{loginbean.logout}" rendered="#{not empty loginbean.loggedInUser}" /></li>
-                            <li><a href="#">CONTACT US</a></li>
-                            <li><h:link styleClass="banner-nav" value="PORTAL" outcome="PatientSearch"
-                                    rendered="#{not empty loginbean.loggedInUser}" /></li>
-
+                            <li class="banner-nav"><h:link styleClass="banner-nav-link login" value="SIGN IN" outcome="Login" rendered="#{empty loginbean.loggedInUser}" /> 
+								<h:link styleClass="banner-nav-link login" value="#{loginbean.loggedInUser}" outcome="Login" rendered="#{not empty loginbean.loggedInUser}" /></li>
+                            <li class="banner-nav"><h:commandLink styleClass="banner-nav-link login" value="SIGN OUT" action="#{loginbean.logout}" rendered="#{not empty loginbean.loggedInUser}" /></li>
+                            <li class="banner-nav"><a href="#" class="banner-nav-link contact" title="Contact Us">CONTACT US</a></li>
+                            <li class="banner-nav"><h:link styleClass="banner-nav-link login" value="PORTAL" outcome="PatientSearch" rendered="#{not empty loginbean.loggedInUser}" /></li>
                         </ul>
                     </h:form>
                 </div>
             </div>
+			<div class="clearfix"></div>
+			<div class="banner-top-gradient"></div>
         </div>
         <!-- END: BANNER & NAVBAR -->
     </ui:composition>

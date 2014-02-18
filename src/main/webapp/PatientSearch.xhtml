@@ -9,7 +9,7 @@
             <ui:define name="content">
 
                 <!-- BEGIN: GOLD CONTENT AREA -->
-                <div class="wrapper-gold-dk">
+                <div class="wrapper-gold">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
@@ -26,34 +26,25 @@
                                     <h4>Name</h4>
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <h:inputText styleClass="form-control" maxlength="20" id="firstName"
-                                                value="#{patientbean.firstName}" required="true"
-                                                requiredMessage="First Name Required" label="First Name" />
+                                            <h:inputText styleClass="form-control" maxlength="20" id="firstName" value="#{patientbean.firstName}" required="true" requiredMessage="First Name Required" label="First Name" />
                                             <p:watermark for="firstName" value="First Name (Required)" />
                                         </div>
                                         <div class="col-md-4">
-                                            <h:inputText styleClass="form-control" maxlength="20" id="middleName"
-                                                value="#{patientbean.middleName}" label="Middle Name" />
+                                            <h:inputText styleClass="form-control" maxlength="20" id="middleName" value="#{patientbean.middleName}" label="Middle Name" />
                                             <p:watermark for="middleName" value="Middle Name" />
                                         </div>
                                         <div class="col-md-4">
-                                            <h:inputText styleClass="form-control" maxlength="20" id="lastName"
-                                                value="#{patientbean.lastName}" required="true"
-                                                requiredMessage="Last Name Required" />
+                                            <h:inputText styleClass="form-control" maxlength="20" id="lastName" value="#{patientbean.lastName}" required="true" requiredMessage="Last Name Required" />
                                             <p:watermark for="lastName" value="Last Name (Required)" />
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <p:calendar styleClass="calendarField" id="popup"
-                                                value="#{patientbean.birthDate}" showOn="button" required="true"
-                                                requiredMessage="Birth Date Required" />
+                                            <p:calendar styleClass="calendarField" id="popup" value="#{patientbean.birthDate}" showOn="button" required="true" requiredMessage="Birth Date Required" />
                                             <p:watermark for="popup" value="Date of Birth (Required)" />
                                         </div>
                                         <div class="col-md-4">
-                                            <h:selectOneMenu value="#{patientbean.gender}" styleClass="form-control"
-                                                style="text-aligh:left" required="true"
-                                                requiredMessage="Gender Required">
+                                            <h:selectOneMenu value="#{patientbean.gender}" styleClass="form-control" style="text-aligh:left" required="true" requiredMessage="Gender Required">
                                                 <f:selectItem itemLabel="Gender (Required)" itemValue="" />
                                                 <f:selectItem itemLabel="Male" itemValue="M" />
                                                 <f:selectItem itemLabel="Female" itemValue="F" />
@@ -63,191 +54,193 @@
                                             </h:selectOneMenu>
                                         </div>
                                         <div class="col-md-4">
-                                            <p:inputMask id="ssn" value="#{patientbean.ssn}" mask="999-99-9999"
-                                                styleClass="form-control" style="text-aligh:left" label="SSN" />
+                                            <p:inputMask id="ssn" value="#{patientbean.ssn}" mask="999-99-9999" styleClass="form-control" style="text-aligh:left" label="SSN" />
                                             <p:watermark for="ssn" value="SSN" />
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <h:inputText maxlength="10" id="patientId" value="#{patientbean.pid}"
-                                                styleClass="form-control" style="text-aligh:left" label="Patient Id">
+                                            <h:inputText maxlength="10" id="patientId" value="#{patientbean.pid}" styleClass="form-control" style="text-aligh:left" label="Patient Id">
                                                 <f:validator validatorId="searchValidator" />
                                                 <f:attribute name="domain" value="#{domain}" />
                                             </h:inputText>
                                             <p:watermark for="patientId" value="Patient Id" />
                                         </div>
                                         <div class="col-md-4">
-                                            <h:inputText maxlength="10" id="organization" binding="#{domain}"
-                                                value="#{patientbean.organization}" styleClass="form-control"
-                                                style="text-aligh:left" label="Organization" />
+                                            <h:inputText maxlength="10" id="organization" binding="#{domain}" value="#{patientbean.organization}" styleClass="form-control" style="text-aligh:left" label="Organization" />
                                             <p:watermark for="organization" value="Organization" />
                                         </div>
                                         <div class="col-md-4"></div>
                                     </div>
-                                    <!-- END: NAME SECTION -->
-                                    <!-- BEGIN: ADDRESS SECTION -->
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <h4>Address</h4>
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <h:inputText maxlength="10" id="streetname"
-                                                        value="#{patientbean.streetname}" styleClass="form-control"
-                                                        label="Street Address" />
-                                                    <p:watermark for="streetname" value="Street Address" />
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <h:inputText maxlength="10" id="city" value="#{patientbean.city}"
-                                                        styleClass="form-control" label="City" />
-                                                    <p:watermark for="city" value="City" />
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <h:selectOneMenu value="#{patientbean.state}"
-                                                        styleClass="form-control">
-                                                        <f:selectItem itemLabel="State" itemValue="" />
-                                                        <f:selectItem itemLabel="AL" itemValue="AL" />
-                                                        <f:selectItem itemLabel="AK" itemValue="AK" />
-                                                        <f:selectItem itemLabel="AZ" itemValue="AZ" />
-                                                        <f:selectItem itemLabel="AR" itemValue="AR" />
-                                                        <f:selectItem itemLabel="CA" itemValue="CA" />
-                                                        <f:selectItem itemLabel="CO" itemValue="CO" />
-                                                        <f:selectItem itemLabel="CT" itemValue="CT" />
-                                                        <f:selectItem itemLabel="DE" itemValue="DE" />
-                                                        <f:selectItem itemLabel="DC" itemValue="DC" />
-                                                        <f:selectItem itemLabel="FL" itemValue="FL" />
-                                                        <f:selectItem itemLabel="GA" itemValue="GA" />
-                                                        <f:selectItem itemLabel="HI" itemValue="HI" />
-                                                        <f:selectItem itemLabel="ID" itemValue="ID" />
-                                                        <f:selectItem itemLabel="IL" itemValue="IL" />
-                                                        <f:selectItem itemLabel="IN" itemValue="IN" />
-                                                        <f:selectItem itemLabel="IA" itemValue="IA" />
-                                                        <f:selectItem itemLabel="KS" itemValue="KS" />
-                                                        <f:selectItem itemLabel="KY" itemValue="KY" />
-                                                        <f:selectItem itemLabel="LA" itemValue="LA" />
-                                                        <f:selectItem itemLabel="ME" itemValue="ME" />
-                                                        <f:selectItem itemLabel="MD" itemValue="MD" />
-                                                        <f:selectItem itemLabel="MA" itemValue="MA" />
-                                                        <f:selectItem itemLabel="MI" itemValue="MI" />
-                                                        <f:selectItem itemLabel="MN" itemValue="MN" />
-                                                        <f:selectItem itemLabel="MS" itemValue="MS" />
-                                                        <f:selectItem itemLabel="MO" itemValue="MO" />
-                                                        <f:selectItem itemLabel="MT" itemValue="MT" />
-                                                        <f:selectItem itemLabel="NE" itemValue="NE" />
-                                                        <f:selectItem itemLabel="NV" itemValue="NV" />
-                                                        <f:selectItem itemLabel="NH" itemValue="NH" />
-                                                        <f:selectItem itemLabel="NJ" itemValue="NJ" />
-                                                        <f:selectItem itemLabel="NM" itemValue="NM" />
-                                                        <f:selectItem itemLabel="NY" itemValue="NY" />
-                                                        <f:selectItem itemLabel="NC" itemValue="NC" />
-                                                        <f:selectItem itemLabel="ND" itemValue="ND" />
-                                                        <f:selectItem itemLabel="OH" itemValue="OH" />
-                                                        <f:selectItem itemLabel="OK" itemValue="OK" />
-                                                        <f:selectItem itemLabel="OR" itemValue="OR" />
-                                                        <f:selectItem itemLabel="PA" itemValue="PA" />
-                                                        <f:selectItem itemLabel="RI" itemValue="RI" />
-                                                        <f:selectItem itemLabel="SC" itemValue="SC" />
-                                                        <f:selectItem itemLabel="SD" itemValue="SD" />
-                                                        <f:selectItem itemLabel="TN" itemValue="TN" />
-                                                        <f:selectItem itemLabel="TX" itemValue="TX" />
-                                                        <f:selectItem itemLabel="UT" itemValue="UT" />
-                                                        <f:selectItem itemLabel="VT" itemValue="VT" />
-                                                        <f:selectItem itemLabel="VA" itemValue="VA" />
-                                                        <f:selectItem itemLabel="WA" itemValue="WA" />
-                                                        <f:selectItem itemLabel="WV" itemValue="WV" />
-                                                        <f:selectItem itemLabel="WI" itemValue="WI" />
-                                                        <f:selectItem itemLabel="WY" itemValue="WY" />
-                                                    </h:selectOneMenu>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <h:inputText maxlength="10" id="ZIP" value="#{patientbean.zip}"
-                                                        styleClass="form-control" label="Zip Code" />
-                                                    <p:watermark for="ZIP" value="Zip Code" />
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <h:inputText maxlength="10" id="Phone" value="#{patientbean.phone}"
-                                                        styleClass="form-control" label="Phone Number" />
-                                                    <p:watermark for="Phone" value="Phone Number" />
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <h:inputText maxlength="10" id="DriversLicense"
-                                                        value="#{patientbean.drivinglicense}" styleClass="form-control"
-                                                        label="Driver's License" />
-                                                    <p:watermark for="DriversLicense" value="Driver's License" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END: ADDRESS SECTION -->
+								</div>
+							</div>
+							<!-- END: NAME SECTION -->
+									
+							<!-- BEGIN: ADDRESS SECTION -->
+							<div class="row">
+								<div class="col-md-12">
+									<h4>Address</h4>
+									<div class="row">
+										<div class="col-md-4">
+											<h:inputText maxlength="10" id="streetname" value="#{patientbean.streetname}" styleClass="form-control" label="Street Address" />
+											<p:watermark for="streetname" value="Street Address" />
+										</div>
+										<div class="col-md-4">
+											<h:inputText maxlength="10" id="city" value="#{patientbean.city}" styleClass="form-control" label="City" />
+											<p:watermark for="city" value="City" />
+										</div>
+										<div class="col-md-4">
+											<h:selectOneMenu value="#{patientbean.state}"
+												styleClass="form-control">
+												<f:selectItem itemLabel="State" itemValue="" />
+												<f:selectItem itemLabel="AL" itemValue="AL" />
+												<f:selectItem itemLabel="AK" itemValue="AK" />
+												<f:selectItem itemLabel="AZ" itemValue="AZ" />
+												<f:selectItem itemLabel="AR" itemValue="AR" />
+												<f:selectItem itemLabel="CA" itemValue="CA" />
+												<f:selectItem itemLabel="CO" itemValue="CO" />
+												<f:selectItem itemLabel="CT" itemValue="CT" />
+												<f:selectItem itemLabel="DE" itemValue="DE" />
+												<f:selectItem itemLabel="DC" itemValue="DC" />
+												<f:selectItem itemLabel="FL" itemValue="FL" />
+												<f:selectItem itemLabel="GA" itemValue="GA" />
+												<f:selectItem itemLabel="HI" itemValue="HI" />
+												<f:selectItem itemLabel="ID" itemValue="ID" />
+												<f:selectItem itemLabel="IL" itemValue="IL" />
+												<f:selectItem itemLabel="IN" itemValue="IN" />
+												<f:selectItem itemLabel="IA" itemValue="IA" />
+												<f:selectItem itemLabel="KS" itemValue="KS" />
+												<f:selectItem itemLabel="KY" itemValue="KY" />
+												<f:selectItem itemLabel="LA" itemValue="LA" />
+												<f:selectItem itemLabel="ME" itemValue="ME" />
+												<f:selectItem itemLabel="MD" itemValue="MD" />
+												<f:selectItem itemLabel="MA" itemValue="MA" />
+												<f:selectItem itemLabel="MI" itemValue="MI" />
+												<f:selectItem itemLabel="MN" itemValue="MN" />
+												<f:selectItem itemLabel="MS" itemValue="MS" />
+												<f:selectItem itemLabel="MO" itemValue="MO" />
+												<f:selectItem itemLabel="MT" itemValue="MT" />
+												<f:selectItem itemLabel="NE" itemValue="NE" />
+												<f:selectItem itemLabel="NV" itemValue="NV" />
+												<f:selectItem itemLabel="NH" itemValue="NH" />
+												<f:selectItem itemLabel="NJ" itemValue="NJ" />
+												<f:selectItem itemLabel="NM" itemValue="NM" />
+												<f:selectItem itemLabel="NY" itemValue="NY" />
+												<f:selectItem itemLabel="NC" itemValue="NC" />
+												<f:selectItem itemLabel="ND" itemValue="ND" />
+												<f:selectItem itemLabel="OH" itemValue="OH" />
+												<f:selectItem itemLabel="OK" itemValue="OK" />
+												<f:selectItem itemLabel="OR" itemValue="OR" />
+												<f:selectItem itemLabel="PA" itemValue="PA" />
+												<f:selectItem itemLabel="RI" itemValue="RI" />
+												<f:selectItem itemLabel="SC" itemValue="SC" />
+												<f:selectItem itemLabel="SD" itemValue="SD" />
+												<f:selectItem itemLabel="TN" itemValue="TN" />
+												<f:selectItem itemLabel="TX" itemValue="TX" />
+												<f:selectItem itemLabel="UT" itemValue="UT" />
+												<f:selectItem itemLabel="VT" itemValue="VT" />
+												<f:selectItem itemLabel="VA" itemValue="VA" />
+												<f:selectItem itemLabel="WA" itemValue="WA" />
+												<f:selectItem itemLabel="WV" itemValue="WV" />
+												<f:selectItem itemLabel="WI" itemValue="WI" />
+												<f:selectItem itemLabel="WY" itemValue="WY" />
+											</h:selectOneMenu>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4">
+											<h:inputText maxlength="10" id="ZIP" value="#{patientbean.zip}" styleClass="form-control" label="Zip Code" />
+											<p:watermark for="ZIP" value="Zip Code" />
+										</div>
+										<div class="col-md-4">
+											<h:inputText maxlength="10" id="Phone" value="#{patientbean.phone}" styleClass="form-control" label="Phone Number" />
+											<p:watermark for="Phone" value="Phone Number" />
+										</div>
+										<div class="col-md-4">
+											<h:inputText maxlength="10" id="DriversLicense" value="#{patientbean.drivinglicense}" styleClass="form-control" label="Driver's License" />
+											<p:watermark for="DriversLicense" value="Driver's License" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- END: ADDRESS SECTION -->
 
-                                    <!-- BEGIN: BUTTON SECTION -->
-                                    <div class="row">
-                                        <div align="center" class="col-md-12">
-                                            <h:commandButton id="Search" value="Search"
-                                                action="#{patientbean.invokePatientSearch}" styleClass="btn btn-blue" />
-                                            <h:commandButton id="Reset" value="Reset"
-                                                action="#{patientbean.resetPatient}" styleClass="btn btn-blue">
-                                                <p:resetInput target="messages" />
-                                            </h:commandButton>
-                                        </div>
-                                    </div>
-                                    <!-- END: BUTTON SECTION -->
+							<!-- BEGIN: BUTTON SECTION -->
+							<div class="row">
+								<div align="center" class="col-md-12">
+									<h:commandButton id="Search" value="Search"
+										action="#{patientbean.invokePatientSearch}" styleClass="btn btn-gold" />
+									<h:commandButton id="Reset" value="Reset"
+										action="#{patientbean.resetPatient}" styleClass="btn btn-gold">
+										<p:resetInput target="messages" />
+									</h:commandButton>
+								</div>
+							</div>
+							<!-- END: BUTTON SECTION -->
 
-                                    <!-- Grid View -->
-                                    <h:dataTable value="#{patientbean.foundPatients}" var="patient" styleClass="table"
-                                        rendered="#{patientbean.displayGridView}">
-                                        <h:column>
-                                            <f:facet name="header">
-                                                <h:outputText value="PATIENT ID" />
-                                            </f:facet>
-                                            <h:outputText value="#{patient.pid}" />
-                                        </h:column>
-                                        <h:column>
-                                            <f:facet name="header">
-                                                <h:outputText value="FIRSTNAME" />
-                                            </f:facet>
-                                            <h:outputText value="#{patient.firstName}" />
-                                        </h:column>
-                                        <h:column>
-                                            <f:facet name="header">
-                                                <h:outputText value="LASTNAME" />
-                                            </f:facet>
-                                            <h:outputText value="#{patient.lastName}" />
-                                        </h:column>
-                                        <h:column>
-                                            <f:facet name="header">
-                                                <h:outputText value="CITY" />
-                                            </f:facet>
-                                            <h:outputText value="#{patient.city}" />
-                                        </h:column>
-                                        <h:column>
-                                            <f:facet name="header">
-                                                <h:outputText value="BIRTHDATE" />
-                                            </f:facet>
-                                            <h:outputText value="#{patient.birthDate}" />
-                                        </h:column>
-                                        <h:column>
-                                            <f:facet name="header">
-                                                <h:outputText value="GENDER" />
-                                            </f:facet>
-                                            <h:outputText value="#{patient.gender}" />
-                                        </h:column>
-                                        <h:column>
-                                            <h:commandLink action="#{patientbean.patientDetails}"
-                                                title="Show Patient Details">
-                                                <i class="glyphicon glyphicon-chevron-right" />
-                                                <f:setPropertyActionListener value="#{patient}"
-                                                    target="#{documentquerybean.selectedPatient}" />
-                                            </h:commandLink>
-                                        </h:column>
-                                    </h:dataTable>
-                                </div>
-                            </div>
+							<!-- BEGIN: Grid View -->
+							<h:dataTable value="#{patientbean.foundPatients}" var="patient" styleClass="table" rendered="#{patientbean.displayGridView}">
+								<h:column>
+									<f:facet name="header">
+										<h:outputText value="PATIENT ID" />
+									</f:facet>
+									<h:outputText value="#{patient.pid}" />
+								</h:column>
+								<h:column>
+									<f:facet name="header">
+										<h:outputText value="FIRSTNAME" />
+									</f:facet>
+									<h:outputText value="#{patient.firstName}" />
+								</h:column>
+								<h:column>
+									<f:facet name="header">
+										<h:outputText value="LASTNAME" />
+									</f:facet>
+									<h:outputText value="#{patient.lastName}" />
+								</h:column>
+								<h:column>
+									<f:facet name="header">
+										<h:outputText value="CITY" />
+									</f:facet>
+									<h:outputText value="#{patient.city}" />
+								</h:column>
+								<h:column>
+									<f:facet name="header">
+										<h:outputText value="BIRTHDATE" />
+									</f:facet>
+									<h:outputText value="#{patient.birthDate}" />
+								</h:column>
+								<h:column>
+									<f:facet name="header">
+										<h:outputText value="GENDER" />
+									</f:facet>
+									<h:outputText value="#{patient.gender}" />
+								</h:column>
+								<h:column>
+									<h:commandLink action="#{patientbean.patientDetails}" title="Show Patient Details">
+										<i class="glyphicon glyphicon-chevron-right" />
+										<f:setPropertyActionListener value="#{patient}" target="#{documentquerybean.selectedPatient}" />
+									</h:commandLink>
+								</h:column>
+							</h:dataTable>
+							<!-- END: Grid View -->
                         </h:form>
                     </div>
                 </div>
+				<!-- END: GOLD CONTENT AREA -->
+
+				<!-- BEGIN: GOLD DIVIDER -->
+				<div class="divider-gold">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+				
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END: GOLD DIVIDER -->
+				
             </ui:define>
         </ui:composition>
     </h:body>

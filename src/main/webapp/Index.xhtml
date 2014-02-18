@@ -4,7 +4,7 @@
     xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
     <!-- <meta charset="utf-8" /> -->
-    <title>CA Health Information Home Portal</title>
+    <title>Health Information Home Portal</title>
 </h:head>
 <body>
     <!-- <ui:composition template="/resources/template/layout.xhtml"> -->
@@ -15,52 +15,39 @@
             <div class="jumbotron">
                 <div class="container">
                     <div class="jumbotron-text">
-                        <p>Health Information Home is an online library to store patient health records for
-                            high-impact diseases such as cancer. HIH will make available of those patient health records
-                            electronically in a secure, and real time manner to HIH participants such as providers,
-                            patients, healthcare researchers and public health agencies. It will improve care
-                            coordination by providing right treatment, on right time, to right patient and expand the
-                            capacity of public health reporting. HIH will serve the community as a commonplace for
-                            practice improvement, and empower and educate high condition patients during the transition
-                            of care.</p>
+                        <p><span class="emphasize">This is introductory text.</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+							<!--Health Information Home is an online library to store patient health records for high-impact diseases such as cancer. HIH will make available of those patient health records electronically in a secure, and real time manner to HIH participants such as providers, patients, healthcare researchers and public health agencies. It will improve care coordination by providing right treatment, on right time, to right patient and expand the capacity of public health reporting. HIH will serve the community as a commonplace for practice improvement, and empower and educate high condition patients during the transition of care.-->
+						</p>
                     </div>
-                    <div class="jumbotron-imgbuttons">
-                        <a href="#" title="Challenge Link"><img src="resources/images/btn-hex-challenge.png"
-                            alt="Challenge Link Image" width="180" height="240" hspace="55" vspace="0" border="0" /></a><a
-                            href="#" title="Opportunity Link"><img src="resources/images/btn-hex-opportunity.png"
-                            alt="Opportunity Link Image" width="180" height="240" hspace="55" vspace="0" border="0" /></a><a
-                            href="#" title="Projects Link"><img src="resources/images/btn-hex-projects.png"
-                            alt="Projects Link Image" width="180" height="240" hspace="55" vspace="0" border="0" /></a>
-                    </div>
+					<div class="jumbotron-learnmore">
+						<p><a href="#"><img src="images/btn-learnmore-trans.png" alt="Learn More Button" width="180" height="54" border="0" title="Learn More"></a></p>
+					</div>
+					<div class="jumbotron-imgbuttons">
+						<a href="#" title="Challenge Link"><img src="images/btn-hex-challenge.png" alt="Challenge Link Image" width="180" height="240" hspace="0" vspace="0" border="0"></a><a href="#" title="Opportunity Link"><img src="images/btn-hex-opportunity.png" alt="Opportunity Link Image" width="180" height="240" hspace="0" vspace="0" border="0"></a><a href="#" title="Projects Link"><img src="images/btn-hex-projects.png" alt="Projects Link Image" width="180" height="240" hspace="0" vspace="0" border="0"></a>
+					</div>
                 </div>
             </div>
             <!-- END: JUMBOTRON (intro text and hex buttons) -->
 
-            <!-- BEGIN: BLUE CONTENT AREA (CHeQ text, etc.) -->
+            <!-- BEGIN: BLUE CONTENT AREA -->
             <div class="wrapper-blue">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h2>California Health eQuality (CHeQ)</h2>
-                            <p>California Health eQuality (CHeQ), a program of the Institute for Population Health
-                                Improvement at the University of California, Davis, is a catalyst of Health Information
-                                Exchange (HIE) for California.</p>
-                            <p>Funded by the California Health and Human Services Agency, and under the auspices of
-                                the Office of the National Coordinator for Health IT (ONC) State HIE Cooperative
-                                Agreement, CHeQ is promoting coordinated care through health information exchange.
-                                Programs including a trusted exchange environment, improved public health capacity for
-                                electronic reporting, HIE acceleration funding opportunities, and the monitoring of HIE
-                                adoption lay a foundation for improved quality of care for all Californians.</p>
-                            <p align="center">
-                                <a href="#"><img src="resources/images/btn-learnmore-white.png"
-                                    alt="Learn More Button" width="180" height="54" vspace="20" border="0"
-                                    title="Learn More" /></a>
-                            </p>
+							<h2>Exciting Content Is Just a Click Away</h2>
+                            <!--<h2>California Health eQuality (CHeQ)</h2>-->
+							<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+							<p align="center"><a href="PatientSearch.xhtml"><img src="images/btn-getstarted-white.png" alt="Get Started Button" width="180" height="54" vspace="20" border="0" title="Get Started"></a></p>
+                            <!--
+							<p>California Health eQuality (CHeQ), a program of the Institute for Population Health Improvement at the University of California, Davis, is a catalyst of Health Information Exchange (HIE) for California.</p>
+                            <p>Funded by the California Health and Human Services Agency, and under the auspices of the Office of the National Coordinator for Health IT (ONC) State HIE Cooperative Agreement, CHeQ is promoting coordinated care through health information exchange. Programs including a trusted exchange environment, improved public health capacity for electronic reporting, HIE acceleration funding opportunities, and the monitoring of HIE adoption lay a foundation for improved quality of care for all Californians.</p>
+                            <p align="center"><a href="#"><img src="resources/images/btn-learnmore-white.png" alt="Learn More Button" width="180" height="54" vspace="20" border="0" title="Learn More" /></a></p>
+							-->
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- END: BLUE CONTENT AREA (CHeQ text, etc.) -->
+            <!-- END: BLUE CONTENT AREA -->
 
             <!-- BEGIN: GOLD CONTENT AREA -->
             <div class="wrapper-gold">
@@ -74,10 +61,19 @@
             </div>
             <!-- END: GOLD CONTENT AREA -->
 
-            <!-- Bootstrap include. Placed at the end of the document so the pages load faster -->
-            <script src="../resources/js/bootstrap.min.js"></script>
-        </ui:define>
+			<!-- BEGIN: GOLD DIVIDER -->
+			<div class="divider-gold">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+			
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END: GOLD DIVIDER -->
 
+        </ui:define>
     </ui:composition>
 </body>
 </html>
