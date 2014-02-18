@@ -170,14 +170,11 @@ ul a.banner-nav-link.contact {
 .page-footer {
 	margin-bottom:0px;
 	/*background:none;*/
-}
-.page-footer footer {
 	height:150px;
 	/*line-height:150px;*/
 	padding-top:30px;
 	padding-bottom:30px;
 }
-
 
 /* -- PATIENT SEARCH STYLES ----------------------------------------------- */
 .form-search-patient h4 {
