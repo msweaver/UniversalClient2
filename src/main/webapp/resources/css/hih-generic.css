@@ -28,6 +28,7 @@ body {
 }
 .banner-top {
 	height:100px;
+	line-height:100px;
 	background:#ffffff;
 }
 
@@ -44,8 +45,6 @@ body {
 	float: right !important;
 }
 ul li.banner-nav {
-	height:100px;
-	line-height:100px;
 }
 ul a.banner-nav-link {
 	display:inline;
