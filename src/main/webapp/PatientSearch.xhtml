@@ -18,7 +18,7 @@
                         </div>
                         <h:form id="patient" role="form" class="form-search-patient">
                             <div class="row">
-                                <p:messages id="messages" closable="true" autoUpdate="true" />
+                                <p:messages id="messages" styleClass="form-messages" closable="true" autoUpdate="true" />
                             </div>
                             <!-- BEGIN: NAME SECTION -->
                             <div class="row">
@@ -40,8 +40,8 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <p:calendar styleClass="calendarField" id="popup" value="#{patientbean.birthDate}" showOn="button" required="true" requiredMessage="Birth Date Required" />
-                                            <p:watermark for="popup" value="Date of Birth (Required)" />
+                                            <p:inputMask id="ssn" value="#{patientbean.ssn}" mask="999-99-9999" styleClass="form-control" style="text-aligh:left" label="SSN" />
+                                            <p:watermark for="ssn" value="SSN" />
                                         </div>
                                         <div class="col-md-4">
                                             <h:selectOneMenu value="#{patientbean.gender}" styleClass="form-control" style="text-aligh:left" required="true" requiredMessage="Gender Required">
@@ -54,8 +54,8 @@
                                             </h:selectOneMenu>
                                         </div>
                                         <div class="col-md-4">
-                                            <p:inputMask id="ssn" value="#{patientbean.ssn}" mask="999-99-9999" styleClass="form-control" style="text-aligh:left" label="SSN" />
-                                            <p:watermark for="ssn" value="SSN" />
+                                            <p:calendar styleClass="calendarField" id="popup" value="#{patientbean.birthDate}" showOn="button" required="true" requiredMessage="Birth Date Required" />
+                                            <p:watermark for="popup" value="Date of Birth (Required)" />
                                         </div>
                                     </div>
                                     <div class="row">
@@ -168,10 +168,8 @@
 							<!-- BEGIN: BUTTON SECTION -->
 							<div class="row">
 								<div align="center" class="col-md-12">
-									<h:commandButton id="Search" value="Search"
-										action="#{patientbean.invokePatientSearch}" styleClass="btn btn-gold" />
-									<h:commandButton id="Reset" value="Reset"
-										action="#{patientbean.resetPatient}" styleClass="btn btn-gold">
+									<h:commandButton id="Reset" value="Reset" action="#{patientbean.resetPatient}" styleClass="btn btn-gold" />
+									<h:commandButton id="Search" value="Search" action="#{patientbean.invokePatientSearch}" styleClass="btn btn-gold" />
 										<p:resetInput target="messages" />
 									</h:commandButton>
 								</div>

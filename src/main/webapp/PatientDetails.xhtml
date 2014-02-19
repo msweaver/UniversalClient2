@@ -4,9 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
     xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
 <h:head>
-    <script type="text/javascript">
-					
-				</script>
+<script type="text/javascript"></script>
 </h:head>
 <h:body>
     <ui:composition template="/resources/template/layout.xhtml">
@@ -18,17 +16,17 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <h:outputText rendered="#{not empty patientbean.selectedPatient.middleName}"
-                                    value="#{patientbean.selectedPatient.firstName} #{patientbean.selectedPatient.middleName} #{patientbean.selectedPatient.lastName}"
-                                    styleClass="h2" />
-                                <h:outputText rendered="#{empty patientbean.selectedPatient.middleName}"
-                                    value="#{patientbean.selectedPatient.firstName} #{patientbean.selectedPatient.lastName}"
-                                    styleClass="h2" />
+                                <h:outputText rendered="#{not empty patientbean.selectedPatient.middleName}" value="#{patientbean.selectedPatient.firstName} #{patientbean.selectedPatient.middleName} #{patientbean.selectedPatient.lastName}" styleClass="h2" />
+                                <h:outputText rendered="#{empty patientbean.selectedPatient.middleName}" value="#{patientbean.selectedPatient.firstName} #{patientbean.selectedPatient.lastName}" styleClass="h2" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <table class="table table-patient">
+									<tr>
+										<th class="sr-only">Patient Data Type</th>
+										<th class="sr-only">Patient Data Value</th>
+									</tr>
                                     <tr>
                                         <td>Patient ID</td>
                                         <td><h:outputText value="#{patientbean.selectedPatient.pid}" /></td>
@@ -47,8 +45,7 @@
                                     </tr>
                                     <tr>
                                         <td>Current Address:</td>
-                                        <td><h:outputText
-                                                value="#{patientbean.selectedPatient.streetAddr} #{patientbean.selectedPatient.city} #{patientbean.selectedPatient.state} #{patientbean.selectedPatient.zip}" /></td>
+                                        <td><h:outputText value="#{patientbean.selectedPatient.streetAddr} #{patientbean.selectedPatient.city} #{patientbean.selectedPatient.state} #{patientbean.selectedPatient.zip}" /></td>
                                     </tr>
                                     <tr>
                                         <td>Phone Number:</td>
@@ -76,26 +73,18 @@
                                 <table class="table table-patient">
                                     <tr>
                                         <td>Document Type</td>
-                                        <td><h:selectOneMenu styleClass="textbox-input-med"
-                                                value="#{documentquerybean.documentType}" id="documentTypeLbl"
-                                                style="text-aligh:left">
-                                                <f:selectItem itemLabel="All" itemValue="#{null}"
-                                                    noSelectionOption="true" />
+                                        <td><h:selectOneMenu styleClass="textbox-input-med" value="#{documentquerybean.documentType}" id="documentTypeLbl" style="text-aligh:left">
+                                                <f:selectItem itemLabel="All" itemValue="#{null}" noSelectionOption="true" />
                                                 <f:selectItem itemLabel="Error Document" itemValue="HIH-ERROR" />
                                             </h:selectOneMenu></td>
                                     </tr>
                                     <tr>
                                         <td>Creation Time From</td>
-                                        <td><p:calendar styleClass="calendarField" id="dateLbl1"
-                                                value="#{documentquerybean.beginTime}" showOn="button"
-                                                pattern="MM/dd/yyyy" navigator="true" /></td>
+                                        <td><p:calendar styleClass="calendarField" id="dateLbl1" value="#{documentquerybean.beginTime}" showOn="button" pattern="MM/dd/yyyy" navigator="true" /></td>
                                     </tr>
                                     <tr>
                                         <td>Creation Time To</td>
-                                        <td><p:calendar styleClass="calendarField" id="dateLbl2"
-                                                value="#{documentquerybean.endTime}" showOn="button"
-                                                pattern="MM/dd/yyyy" navigator="true" /> <p:message id="m3"
-                                                for="dateLbl2" /></td>
+                                        <td><p:calendar styleClass="calendarField" id="dateLbl2" value="#{documentquerybean.endTime}" showOn="button" pattern="MM/dd/yyyy" navigator="true" /> <p:message id="m3" for="dateLbl2" /></td>
                                     </tr>
                                 </table>
                             </div>
@@ -103,16 +92,29 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <h:commandLink action="#{patientbean.goBack}" class="btn btn-blue">
-                                    <i class="glyphicon glyphicon-chevron-left"></i>BACK TO SEARCH
+                                    <i class="glyphicon glyphicon-chevron-left"></i> BACK TO SEARCH
                                 </h:commandLink>
-                                <h:commandLink action="#{documentquerybean.invokeDocumentDetails}"
-                                    class="btn btn-blue pull-right">
-                                    <i class="glyphicon glyphicon-file"></i>DOCUMENTS
+                                <h:commandLink action="#{documentquerybean.invokeDocumentDetails}" class="btn btn-blue pull-right">
+                                    <i class="glyphicon glyphicon-file"></i> VIEW PATIENT DOCUMENTS
                                 </h:commandLink>
                             </div>
                         </div>
                     </div>
                 </div>
+				<!-- END: BLUE CONTENT AREA -->
+				
+				<!-- BEGIN: GOLD DIVIDER -->
+				<div class="divider-gold">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+				
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END: GOLD DIVIDER -->
+				
             </h:form>
         </ui:define>
     </ui:composition>
