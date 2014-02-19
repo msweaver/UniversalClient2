@@ -177,7 +177,7 @@
 							<!-- END: BUTTON SECTION -->
 
 							<!-- BEGIN: Grid View -->
-							<h:dataTable value="#{patientbean.foundPatients}" var="patient" styleClass="table" rendered="#{patientbean.displayGridView}">
+							<h:dataTable value="#{patientbean.foundPatients}" var="patient" styleClass="table form-search-results" rendered="#{patientbean.displayGridView}">
 								<h:column>
 									<f:facet name="header">
 										<h:outputText value="PATIENT ID" />
@@ -215,8 +215,8 @@
 									<h:outputText value="#{patient.gender}" />
 								</h:column>
 								<h:column>
-									<h:commandLink action="#{patientbean.patientDetails}" title="Show Patient Details">
-										<i class="glyphicon glyphicon-chevron-right" />
+									<h:commandLink action="#{patientbean.patientDetails}" title="Show Patient Details" styleClass="btn btn-blue">
+										VIEW DETAILS <i class="glyphicon glyphicon-chevron-right" />
 										<f:setPropertyActionListener value="#{patient}" target="#{documentquerybean.selectedPatient}" />
 									</h:commandLink>
 								</h:column>

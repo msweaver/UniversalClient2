@@ -255,6 +255,14 @@ ul a.banner-nav-link.contact {
 	border-style: none;
 }
 
+.table.form-search-results {
+	margin-top:15px;
+	border-top:2px solid #5d3919;
+}
+.table.form-search-results th {
+	border-bottom:1px solid #5d3919;
+}
+
 /* -- PATIENT PROFILE STYLES ----------------------------------------------- */
 table.table-patient {
 	margin-top:20px;
