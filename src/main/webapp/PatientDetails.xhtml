@@ -28,11 +28,11 @@
 										<th class="sr-only">Patient Data Value</th>
 									</tr>
                                     <tr>
-                                        <td>Patient ID</td>
+                                        <td>Patient ID:</td>
                                         <td><h:outputText value="#{patientbean.selectedPatient.pid}" /></td>
                                     </tr>
                                     <tr>
-                                        <td>Organization</td>
+                                        <td>Organization:</td>
                                         <td><h:outputText value="#{patientbean.selectedPatient.domain}" /></td>
                                     </tr>
                                     <tr>
@@ -72,18 +72,22 @@
                             <div class="col-md-12">
                                 <table class="table table-patient">
                                     <tr>
-                                        <td>Document Type</td>
+										<th class="sr-only">Document Parameter Type</th>
+										<th class="sr-only">Document Parameter Value</th>
+									</tr>
+                                    <tr>
+                                        <td>Document Type:</td>
                                         <td><h:selectOneMenu styleClass="textbox-input-med" value="#{documentquerybean.documentType}" id="documentTypeLbl" style="text-aligh:left">
                                                 <f:selectItem itemLabel="All" itemValue="#{null}" noSelectionOption="true" />
                                                 <f:selectItem itemLabel="Error Document" itemValue="HIH-ERROR" />
                                             </h:selectOneMenu></td>
                                     </tr>
                                     <tr>
-                                        <td>Creation Time From</td>
+                                        <td>Creation Time From:</td>
                                         <td><p:calendar styleClass="calendarField" id="dateLbl1" value="#{documentquerybean.beginTime}" showOn="button" pattern="MM/dd/yyyy" navigator="true" /></td>
                                     </tr>
                                     <tr>
-                                        <td>Creation Time To</td>
+                                        <td>Creation Time To:</td>
                                         <td><p:calendar styleClass="calendarField" id="dateLbl2" value="#{documentquerybean.endTime}" showOn="button" pattern="MM/dd/yyyy" navigator="true" /> <p:message id="m3" for="dateLbl2" /></td>
                                     </tr>
                                 </table>
