@@ -214,8 +214,8 @@
 									</f:facet>
 									<h:outputText value="#{patient.gender}" />
 								</h:column>
-								<h:column>
-									<h:commandLink action="#{patientbean.patientDetails}" title="Show Patient Details" styleClass="btn btn-blue">
+								<h:column style="text-aligh:right">
+									<h:commandLink action="#{patientbean.patientDetails}" title="View Patient Details" styleClass="btn btn-blue" style="margin:0px;">
 										VIEW DETAILS <i class="glyphicon glyphicon-chevron-right" />
 										<f:setPropertyActionListener value="#{patient}" target="#{documentquerybean.selectedPatient}" />
 									</h:commandLink>

@@ -153,7 +153,6 @@ ul a.banner-nav-link.contact {
 	padding-right:0px;*/
 }
 .wrapper-blue {
-	padding-top:15px;
 	background:#2a4560;
 	color:#ffffff;
 }
@@ -161,16 +160,15 @@ ul a.banner-nav-link.contact {
 	background:#0065a1;
 	color:#ffffff;
 }
-.wrapper-blue-dk h2 {
-	padding-top:15px;
-	background:#0065a1;
-	color:#ffffff;
-}
 .wrapper-blue-gradient {
 	background:url(../images/bg-blue-gradient.png) repeat-x top left #243c53;
 	color:#ffffff;
 }
-.wrapper-blue-gradient h2 {
+.wrapper-blue h2, .wrapper-blue-dk h2, .wrapper-blue-gradient h2 {
+	padding-top:15px;
+}
+.wrapper-blue .h2, .wrapper-blue-dk .h2, .wrapper-blue-gradient .h2 {
+	display:inline-block;
 	padding-top:15px;
 }
 .wrapper-gold {
