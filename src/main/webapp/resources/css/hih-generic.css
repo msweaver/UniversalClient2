@@ -7,6 +7,33 @@ body {
 	background:#2a4560;
 }
 
+
+/* -- SIGNIN STYLES ----------------------------------------------------------*/
+.form-signin {
+	max-width: 330px;
+	padding:40px 0px; /* ORIGINALLY: 15px */
+	margin: 0 auto;
+}
+.form-signin .form-signin-heading,.form-signin .checkbox {
+	margin-bottom: 10px;
+}
+.form-signin .form-control {
+	position: relative;
+	font-size: 16px;
+	height: auto;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+.form-signin .btn-blue {
+	background-color: #0065a1;
+}
+
+
 /* -- NAVBAR & BANNER STYLES ----------------------------------------------- */
 .navbar {
 	margin-bottom:0px;
@@ -180,6 +207,9 @@ ul a.banner-nav-link.contact {
 }
 
 /* -- PATIENT SEARCH STYLES ----------------------------------------------- */
+.form-search-patient .ui-messages {
+	margin:auto 15px;
+}
 .form-search-patient h4 {
 	padding-bottom:10px;
 	border-bottom:1px solid #5d3919;
@@ -218,6 +248,11 @@ ul a.banner-nav-link.contact {
 }
 .form-search-patient .btn-gold:hover {
 	background-color:#5d3919; /*ffc32b*/
+}
+
+.form-search-patient .panel {
+	/*.wrapper-gold-dk;*/
+	border-style: none;
 }
 
 /* -- PATIENT PROFILE STYLES ----------------------------------------------- */
