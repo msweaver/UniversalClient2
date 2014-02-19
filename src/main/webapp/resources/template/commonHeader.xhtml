@@ -23,11 +23,11 @@
                 <div class="navbar-collapse collapse">
                     <h:form id="signin">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="banner-nav"><h:link styleClass="banner-nav-link login" value="SIGN IN" outcome="Login" rendered="#{empty loginbean.loggedInUser}" /> 
+                            <li class="banner-nav"><h:link styleClass="banner-nav-link login username" value="SIGN IN" outcome="Login" rendered="#{empty loginbean.loggedInUser}" /> 
 								<h:link styleClass="banner-nav-link login" value="#{loginbean.loggedInUser}" outcome="Login" rendered="#{not empty loginbean.loggedInUser}" /></li>
                             <li class="banner-nav"><h:commandLink styleClass="banner-nav-link login" value="SIGN OUT" action="#{loginbean.logout}" rendered="#{not empty loginbean.loggedInUser}" /></li>
-                            <li class="banner-nav"><a href="#" class="banner-nav-link contact" title="Contact Us">CONTACT US</a></li>
                             <li class="banner-nav"><h:link styleClass="banner-nav-link login" value="PORTAL" outcome="PatientSearch" rendered="#{not empty loginbean.loggedInUser}" /></li>
+                            <li class="banner-nav"><a href="#" class="banner-nav-link contact" title="Contact Us">CONTACT US</a></li>
                         </ul>
                     </h:form>
                 </div>

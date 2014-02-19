@@ -60,6 +60,9 @@ ul a.banner-nav-link:hover {
 ul a.banner-nav-link.login {
 	font-size:14px;
 }
+ul a.banner-nav-link.username {
+	text-transform:capitalize;
+}
 ul a.banner-nav-link.contact {
 	font-size:18px;
 }
