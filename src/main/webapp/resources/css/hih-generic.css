@@ -217,7 +217,8 @@ ul a.banner-nav-link.contact {
 .form-search-patient h4 ~ div.row {
 	margin:20px 0px;
 }
-.form-search-patient h4 ~ div.row div[class^='col-md-'] {
+.form-search-patient h4 ~ div.row div[class^='col-md-'],
+.form-search-patient h4 ~ div.row div[class^='col-sm-'] {
 	padding-left:0px;
 	padding-right:15px;
 }
