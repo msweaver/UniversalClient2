@@ -22,7 +22,8 @@
                         </div>
                         <h:panelGroup styleClass="document-detail-bottom">
                             <p:panel>
-                                <p:accordionPanel value="#{documentquerybean.documents.results}" var="document">
+                                <h:outputText rendered="#{empty documentquerybean.documents.results}" value="There are no documents to display." />
+								<p:accordionPanel value="#{documentquerybean.documents.results}" var="document">
                                     <p:tab title="#{document.creationDate} #{document.documentTitle}">
                                         <h:commandLink id="documentLink" action="#{documentbean.retrieveDocument}" target="_new">
                                             <p:panelGrid columns="1" cellpadding="10" styleClass="document-tab">
