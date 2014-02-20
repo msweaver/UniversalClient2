@@ -271,7 +271,7 @@ table.table-patient {
 }
 table.table-patient td:first-child {
 	width:33%;
-	padding-left:100px;
+	padding-left:80px;
 	font-weight:bold;
 }
 .btn-blue {
