@@ -334,8 +334,16 @@ table.table-documents td .document-detail {
 	border-left: 6px solid transparent;
 }
 
-
-
+/* -- PATIENT DOCUMENTS STYLES -- OVERRIDES PRIME FACES STYLES --------------- */
+.document-detail-bottom .ui-panel {
+	background-color: #f2f0ce;
+}
+.document-detail-bottom .ui-panel .ui-panel-content {
+	padding: 1em;
+}
+.document-detail-bottom .ui-accordion .ui-accordion-content {
+	background-color: transparent;
+}
 
 
 
