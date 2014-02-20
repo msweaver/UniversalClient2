@@ -336,6 +336,7 @@ table.table-documents td .document-detail {
 
 /* -- PATIENT DOCUMENTS STYLES -- OVERRIDES PRIME FACES STYLES --------------- */
 .document-detail-bottom .ui-panel {
+	margin-top:20px;
 	background-color: #f2f0ce;
 }
 .document-detail-bottom .ui-panel .ui-panel-content {
