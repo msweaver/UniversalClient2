@@ -25,25 +25,25 @@
                                 <div class="col-md-12">
                                     <h4>Name</h4>
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-sm-4">
                                             <h:inputText styleClass="form-control" maxlength="20" id="firstName" value="#{patientbean.firstName}" required="true" requiredMessage="First Name Required" label="First Name" />
                                             <p:watermark for="firstName" value="First Name (Required)" />
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-sm-4">
                                             <h:inputText styleClass="form-control" maxlength="20" id="middleName" value="#{patientbean.middleName}" label="Middle Name" />
                                             <p:watermark for="middleName" value="Middle Name" />
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-sm-4">
                                             <h:inputText styleClass="form-control" maxlength="20" id="lastName" value="#{patientbean.lastName}" required="true" requiredMessage="Last Name Required" />
                                             <p:watermark for="lastName" value="Last Name (Required)" />
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-sm-4">
                                             <p:inputMask id="ssn" value="#{patientbean.ssn}" mask="999-99-9999" styleClass="form-control" style="text-aligh:left" label="SSN" />
                                             <p:watermark for="ssn" value="SSN" />
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-sm-4">
                                             <h:selectOneMenu value="#{patientbean.gender}" styleClass="form-control" style="text-aligh:left" required="true" requiredMessage="Gender Required">
                                                 <f:selectItem itemLabel="Gender (Required)" itemValue="" />
                                                 <f:selectItem itemLabel="Male" itemValue="M" />
@@ -53,24 +53,24 @@
                                                 <f:selectItem itemLabel="Other" itemValue="O" />
                                             </h:selectOneMenu>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-sm-4">
                                             <p:calendar styleClass="calendarField" id="popup" value="#{patientbean.birthDate}" showOn="button" required="true" requiredMessage="Birth Date Required" />
                                             <p:watermark for="popup" value="Date of Birth (Required)" />
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-sm-4">
                                             <h:inputText maxlength="10" id="patientId" value="#{patientbean.pid}" styleClass="form-control" style="text-aligh:left" label="Patient Id">
                                                 <f:validator validatorId="searchValidator" />
                                                 <f:attribute name="domain" value="#{domain}" />
                                             </h:inputText>
                                             <p:watermark for="patientId" value="Patient Id" />
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-sm-4">
                                             <h:inputText maxlength="10" id="organization" binding="#{domain}" value="#{patientbean.organization}" styleClass="form-control" style="text-aligh:left" label="Organization" />
                                             <p:watermark for="organization" value="Organization" />
                                         </div>
-                                        <div class="col-md-4"></div>
+                                        <div class="col-sm-4"></div>
                                     </div>
 								</div>
 							</div>
@@ -81,15 +81,15 @@
 								<div class="col-md-12">
 									<h4>Address</h4>
 									<div class="row">
-										<div class="col-md-4">
+										<div class="col-sm-4">
 											<h:inputText maxlength="10" id="streetname" value="#{patientbean.streetname}" styleClass="form-control" label="Street Address" />
 											<p:watermark for="streetname" value="Street Address" />
 										</div>
-										<div class="col-md-4">
+										<div class="col-sm-4">
 											<h:inputText maxlength="10" id="city" value="#{patientbean.city}" styleClass="form-control" label="City" />
 											<p:watermark for="city" value="City" />
 										</div>
-										<div class="col-md-4">
+										<div class="col-sm-4">
 											<h:selectOneMenu value="#{patientbean.state}"
 												styleClass="form-control">
 												<f:selectItem itemLabel="State" itemValue="" />
@@ -148,15 +148,15 @@
 										</div>
 									</div>
 									<div class="row">
-										<div class="col-md-4">
+										<div class="col-sm-4">
 											<h:inputText maxlength="10" id="ZIP" value="#{patientbean.zip}" styleClass="form-control" label="Zip Code" />
 											<p:watermark for="ZIP" value="Zip Code" />
 										</div>
-										<div class="col-md-4">
+										<div class="col-sm-4">
 											<h:inputText maxlength="10" id="Phone" value="#{patientbean.phone}" styleClass="form-control" label="Phone Number" />
 											<p:watermark for="Phone" value="Phone Number" />
 										</div>
-										<div class="col-md-4">
+										<div class="col-sm-4">
 											<h:inputText maxlength="10" id="DriversLicense" value="#{patientbean.drivinglicense}" styleClass="form-control" label="Driver's License" />
 											<p:watermark for="DriversLicense" value="Driver's License" />
 										</div>
